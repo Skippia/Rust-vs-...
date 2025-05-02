@@ -31,12 +31,6 @@ To build and run all examples:
 make run
 ```
 
-To build or run code for a specific language:
-
-```sh
-make build
-```
-
 ## Goals
 
 - Compare implementations of similar algorithms and tasks.
