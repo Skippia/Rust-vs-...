@@ -7,11 +7,11 @@ This document records the runtime performance of the Collatz algorithm implement
 ## C++ Implementation
 
 ```
-Total iterations: 10000000  Time elapsed: 1.58517 s
-Total iterations: 10000000  Time elapsed: 1.5673 s
-Total iterations: 10000000  Time elapsed: 1.54527 s
-Total iterations: 10000000  Time elapsed: 1.5372 s
-Total iterations: 10000000  Time elapsed: 1.5436 s
+Total iterations: 10000000  Time elapsed: 1.58517s
+Total iterations: 10000000  Time elapsed: 1.5673s
+Total iterations: 10000000  Time elapsed: 1.54527s
+Total iterations: 10000000  Time elapsed: 1.5372s
+Total iterations: 10000000  Time elapsed: 1.5436s
 ```
 
 ## Go Implementation
