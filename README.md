@@ -2,13 +2,6 @@
 
 A comparative study and implementation of similar functionalities in Rust, Go, C++, and Makefile. This repository demonstrates how common programming tasks can be solved using different languages, highlighting their syntax, performance, and ecosystem differences.
 
-## Language Composition
-
-- **Makefile**: 32%
-- **C++**: 28.3%
-- **Rust**: 20.1%
-- **Go**: 19.6%
-
 ## Overview
 
 This repo contains code samples and build scripts that showcase parallel solutions to the same problems in Rust, Go, and C++. The Makefile automates build and test processes across these languages. The goal is to provide a hands-on reference for developers interested in understanding cross-language design and performance trade-offs.
@@ -17,9 +10,6 @@ This repo contains code samples and build scripts that showcase parallel solutio
 
 ```
 .
-├── rust/       # Rust implementations
-├── go/         # Go implementations
-├── cpp/        # C++ implementations
 ├── Makefile    # Build automation for all languages
 └── README.md   # Project overview and instructions
 ```
@@ -38,15 +28,13 @@ This repo contains code samples and build scripts that showcase parallel solutio
 To build and run all examples:
 
 ```sh
-make all
+make run
 ```
 
 To build or run code for a specific language:
 
 ```sh
-make rust
-make go
-make cpp
+make build
 ```
 
 ## Goals
