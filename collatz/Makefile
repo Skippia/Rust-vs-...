@@ -28,12 +28,18 @@ WASM_DIR    := js-wasm
 WASM_PKG    := $(WASM_DIR)/pkg
 WASM_ENTRY  := $(WASM_DIR)/src/index.cjs
 
+# Node.js sources
+NODE_DIR      := js
+NODE_ENTRY    := $(NODE_DIR)/src/index.cjs
+
+
 # ANSI color codes
 RED         := \033[0;31m
 GREEN       := \033[0;32m
 BLUE        := \033[0;34m
 CYAN        := \033[0;36m
-NC          := \033[0m
+NC          := \033[0;37m
+KT          := \033[0;29m
 
 .PHONY: all build wasm build-wasm run clean
 
@@ -66,6 +72,9 @@ run: build
 	@echo
 	@echo "$(CYAN)==> Running Node.js WASM implementation$(NC)"
 	@for i in 1 2 3 4 5; do $(NODE) $(WASM_ENTRY); done
+	@echo
+	@echo "$(KT)==> Running Node.js implementation$(NC)"
+	@for i in 1 2 3 4 5; do $(NODE) $(NODE_ENTRY); done
 	@$(MAKE) clean
 clean:
 	@rm -f $(CPP_OUT) $(GO_OUT)
