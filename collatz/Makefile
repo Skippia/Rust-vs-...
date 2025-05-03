@@ -6,6 +6,7 @@ GO          := go
 CARGO       := cargo
 WASM_PACK   := wasm-pack
 NODE        := node
+BUN        := bun
 
 # Flags
 CXXFLAGS    := -std=c++17 -O3
@@ -39,7 +40,8 @@ GREEN       := \033[0;32m
 BLUE        := \033[0;34m
 CYAN        := \033[0;36m
 NC          := \033[0;37m
-KT          := \033[0;29m
+KT          := \033[0;35m
+YELLOW      := \033[0;33m
 
 .PHONY: all build wasm build-wasm run clean
 
@@ -75,6 +77,9 @@ run: build
 	@echo
 	@echo "$(KT)==> Running Node.js implementation$(NC)"
 	@for i in 1 2 3 4 5; do $(NODE) $(NODE_ENTRY); done
+	@echo
+	@echo "$(YELLOW)==> Running Bun (js) implementation$(NC)"
+	@for i in 1 2 3 4 5; do $(BUN) $(NODE_ENTRY); done
 	@$(MAKE) clean
 clean:
 	@rm -f $(CPP_OUT) $(GO_OUT)
